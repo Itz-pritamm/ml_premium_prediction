@@ -1,5 +1,6 @@
 # codebasics ML course: codebasics.io, all rights reserverd
-
+pip install joblib 
+import joblib
 import streamlit as st
 from prediction_helper import predict
 
