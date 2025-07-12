@@ -1,7 +1,7 @@
 # codebasics ML course: codebasics.io, all rights reserverd
 
 import pandas as pd
-pip install joblib
+
 import joblib
 
 model_young = joblib.load("artifacts\model_young.joblib")
