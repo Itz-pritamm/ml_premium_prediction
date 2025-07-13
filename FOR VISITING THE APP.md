@@ -1,4 +1,4 @@
-# Premium Prediction Using Machine Learning and EDA
+# Premium Prediction Using Machine Learning 
 
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://premium-prediction-project.streamlit.app/)
 
