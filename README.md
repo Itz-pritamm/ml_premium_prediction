@@ -1,47 +1,45 @@
-# ml_premium_prediction
-🔍 Project Highlights:
-Objective: Predict the insurance premium cost based on demographic and medical data.
+# Premium Prediction Using Machine Learning 
 
-Data Preparation:
+This project aims to predict health insurance premium amounts using Machine Learning (ML) .
 
-Cleaned and handled null values effectively.
+## 🔹 Project Overview
 
-Transformed and formatted data for better model performance.
+- **Goal**: Predict insurance premium amounts based on user demographic and medical features.
+- **Techniques Used**: Data cleaning, feature engineering, model training, and evaluation.
 
-Extracted key insights from EDA to guide modeling decisions.
+## 🔹 Data Preparation and EDA
 
-📊 Initial ML Model:
-Applied machine learning on the overall dataset.
+- Handled missing (null) values appropriately.
+- Brought data into a proper format using preprocessing steps.
+- Used EDA to extract insights and detect issues affecting model performance.
 
-Achieved 98% accuracy, but faced high error variance (30% difference between actual and predicted values).
+## 🔹 Initial Model Performance
 
-🧑‍⚕️ Age-Based Data Split:
-Found a critical issue with the age feature during analysis.
+- Trained a machine learning model on the full dataset.
+- Achieved **98% accuracy**, but observed a **30% average difference** between actual and predicted values.
+- After analysis, the **age** column was found to be the main cause, especially for users aged 25 or younger.
 
-Split the data into two groups:
+## 🔹 Data Splitting Strategy
 
-Young group (age ≤ 25)
+- Split data into two subsets:
+  - **Young Group**: Age ≤ 25
+  - **Rest Group**: Age > 25
 
-Rest group (age > 25)
+- Trained separate models for each:
+  - **Rest Group** model: Achieved **99% accuracy**
+  - **Young Group** model: Initially only **60% accuracy**
 
-🔄 Improved Modeling:
-Trained separate ML models for each group:
+## 🔹 Feature Enhancement
 
-Rest group: Achieved 99% accuracy.
+- Introduced a new feature: **Genetic Risk Score** (based on medical history).
+- After adding this feature:
+  - **Young Group** model improved from 60% to **98% accuracy**
 
-Young group: Initially gave 60% accuracy.
+## 🔹 Final Solution
 
-Introduced a new feature: Genetic Risk Score (based on medical history).
+- Developed a **two-model system**:
+  - `model_young.joblib` for users aged ≤ 25
+  - `model_rest.joblib` for users aged > 25
+- Achieved high accuracy across both age groups.
+- The model is ready to be deployed with a scalable prediction pipeline.
 
-Post-feature engineering, the young group model improved to 98% accuracy.
-
-✅ Final Outcome:
-Two specialized models:
-
-model_young.joblib for age ≤ 25
-
-model_rest.joblib for others
-
-Significant accuracy improvement across all age groups.
-
-Developed a scalable prediction pipeline ready for deployment.
