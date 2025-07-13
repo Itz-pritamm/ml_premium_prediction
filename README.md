@@ -41,5 +41,5 @@ This project aims to predict health insurance premium amounts using Machine Lear
   - `model_young.joblib` for users aged ≤ 25
   - `model_rest.joblib` for users aged > 25
 - Achieved high accuracy across both age groups.
-- The model is ready to be deployed with a scalable prediction pipeline.
+
 
